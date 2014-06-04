@@ -1,0 +1,33 @@
+{
+    "authors": [
+        {
+            "name": "Matthew Grasmick",
+            "email": "matthew.grasmick@acquia.com",
+            "homepage": "https://github.com/grasmash/",
+            "role": "Developer"
+        },
+        {
+            "name": "Alfred Nutile",
+            "email": "alfrednutile@gmail.com",
+            "homepage": "https://github.com/alnutile/",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "behat/behat": ">=2.4",
+        "php": ">=5.4.0",
+        "symfony/process": ">=2.3",
+        "symfony/event-dispatcher": ">=2.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~3.0"
+    },
+    "config": {
+        "bin-dir": "bin/"
+    },
+    "autoload": {
+        "psr-0": {
+            "BehatManager": "src/"
+        }
+    }
+}
