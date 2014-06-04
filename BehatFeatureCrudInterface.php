@@ -5,37 +5,58 @@ use Behat\Gherkin\Node\FeatureNode;
 class BehatFeatureCrudInterface {
 
   /**
-   * [show description]
-   * @param  string $id [description]
-   * @return [type]     [description]
+   * Retrieves a Behat feature.
+   *
+   * @param string $id
+   *   A feature identifier.
+   *
+   * @return FeatureNode
+   *   A Behat feature object.
    */
   public function show(string $id);
 
   /**
-   * [delete description]
-   * @param  string $id [description]
-   * @return [type]     [description]
+   * Deletes a Behat feature.
+   *
+   * @param string $id
+   *   A feature identifier.
+   *
+   * @return bool
+   *   TRUE if the feature was successfully deleted.
    */
   public function delete(string $id);
 
   /**
-   * [update description]
-   * @param  FeatureNode $id [description]
-   * @return [type]          [description]
+   * Updates a Behat feature.
+   *
+   * @param FeatureNode $feature
+   *   A behat feature object.
+   *
+   * @return bool
+   *   TRUE if the feature was successfully updated.
    */
-  public function update(FeatureNode $id);
+  public function update(FeatureNode $feature);
 
   /**
-   * [create description]
-   * @param  FeatureNode $feature [description]
-   * @return [type]               [description]
+   * Creates a new Behat feature.
+   *
+   * @param FeatureNode $feature
+   *   A behat feature object.
+   *
+   * @return bool
+   *   TRUE if the feature was successfully created.
    */
   public function create(FeatureNode $feature)
 
   /**
-   * [index description]
-   * @param  array  $tags [description]
-   * @return [type]       [description]
+   * Returns an array of Behat features, optionally filtered by tag.
+   *
+   * @param  array $tags
+   *   (optional). A single dimensional array of tags. Defaults to empty.
+   *   E.g., array('javascripts', '~api').
+   *
+   * @return array
+   *   An associative array of Behat features, keyed by feature identifier.
    */
   public function index(array $tags);
 
