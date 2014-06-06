@@ -1,8 +1,8 @@
-<?php
+<?php namespace BehatManager\Interfaces;
 
 use Behat\Gherkin\Node\FeatureNode;
 
-class BehatFeatureCrudInterface {
+interface BehatFeatureCrudInterface {
 
   /**
    * Retrieves a Behat feature.
@@ -46,7 +46,7 @@ class BehatFeatureCrudInterface {
    * @return bool
    *   TRUE if the feature was successfully created.
    */
-  public function create(FeatureNode $feature)
+  public function create(FeatureNode $feature);
 
   /**
    * Returns an array of Behat features, optionally filtered by tag.

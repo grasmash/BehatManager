@@ -1,6 +1,6 @@
-<?php
+<?php namespace BehatManager\Interfaces;
 
-class BehatReportingInterface {
+interface BehatReportingInterface {
 
   /**
    * Returns an array of results from Behat runs.
